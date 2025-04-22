@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --color-dark: #222831;
+  --color-azure: #0099ff;
+  --color-pickled-bluewood: #344155;
+  --color-greenish-blue: #297b84;
+  --color-lavender-pinocchio: #e0e0e0;
+
+  --breakpoint-sm: 518px;
+}
+
+html {
+  @apply h-dvh;
+}
+
+body {
+  @apply flex;
+}
+
+html,
+body {
+  @apply bg-dark text-lavender-pinocchio min-h-dvh;
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+a,
+p {
+  @apply text-base;
+}
+
+button {
+  @apply bg-greenish-blue cursor-pointer px-2 py-1 text-lg;
+}
+button:hover {
+  @apply bg-greenish-blue/80;
+}
+button:active {
+  @apply bg-greenish-blue/60;
+}
+button:disabled {
+  @apply bg-greenish-blue/40 text-lavender-pinocchio/40 cursor-not-allowed;
+}
