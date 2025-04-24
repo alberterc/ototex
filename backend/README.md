@@ -2,6 +2,29 @@
 
 Backend for the Ototex website built with FastAPI in Python.
 
+## Setup
+
+Need a "models" directory to store the models used by vosk and deepmultilingualpunctuation.
+
+1. Create a "models" directory inside the "app" directory.
+2. Store the vosk and deepmultilingualpunctuation models inside their respective directories named after themselves.
+3. Correct directory structure:
+
+```
+backend/
+├─ app/
+│  ├─ models/
+│  │  ├─ deepmultilingualpunctuation/
+│  │  │  └─ (the model files)
+│  │  └─ vosk/
+│  │     └─ (the model files)
+│  ├─ routes/
+│  ├─ schemas/
+...
+```
+
+_See [config.py](app/config.py) to check and customize the "models" directory._
+
 ## Development
 
 ### Dependencies installation
